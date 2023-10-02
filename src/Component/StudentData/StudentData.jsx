@@ -6,7 +6,7 @@ import Row from 'react-bootstrap/Row';
 import img1 from '../../../public/img-1.jpg'
 import { useState } from 'react';
 import uuid from 'react-uuid';
-import { StuAction } from '../../Services/Action/StuAdd';
+import { StuActionAsync } from '../../Services/Action/StuAdd';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router';
 
@@ -58,7 +58,7 @@ function StudentData() {
 
         let ndata = ({ ...inputList, id: id });
 
-        dispatch(StuAction(ndata))
+        dispatch(StuActionAsync(ndata))
 
         setinputList({
             fname: '',

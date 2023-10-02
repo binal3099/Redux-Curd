@@ -1,0 +1,11 @@
+.navbar[data-bs-theme=dark] {
+    background-color: rgb(0, 0, 78);
+    padding: 15px;
+}
+
+a {
+    /* color: rgba(var(--bs-link-color-rgb),var(--bs-link-opacity,1)); */
+    text-decoration: none;
+    margin: 0px 10px;
+    color: white;
+}

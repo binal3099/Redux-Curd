@@ -16,7 +16,7 @@ const StudentReducer = (state = initialstate, action) => {
         case Add :
             return {
                 ...state,
-                students : [...state.students, action.payload]
+                students : ([...state.students, action.payload])
             }
 
         case EDITSTU :

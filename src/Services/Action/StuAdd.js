@@ -1,6 +1,18 @@
+import { addDoc, collection, doc, setDoc } from "firebase/firestore";
 import { Add, Delete, EDITSTU, Update } from "../Actiontype/Actiontype"
+import { db } from "../FireBase";
 
-export const StuAction = (Data) =>{
+
+export const StuActionAsync = (data)=>{
+
+    return async dispatch =>{
+        // await setDoc(doc(db, "students", "2"), data); setDoc
+        await addDoc(collection(db, "students"), data);
+        dispatch(StuAction(data))
+    }
+}
+
+const StuAction = (Data) =>{
 
     // console.log(Data);
     return{
